@@ -1,2 +1,2 @@
 # CoffeePriest
-Code from CofeePriest
+Code from CoffeePriestBot on Telegram
