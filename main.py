@@ -91,7 +91,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     init_db()
-    TOKEN = os.getenv("7751557507:AAEUGfRV0gTSq-CySLrfIbrLLR1BNL5WjW4")
+    TOKEN = os.getenv("BOT_TOKEN")
     app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
