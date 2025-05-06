@@ -88,6 +88,9 @@ async def ajustar(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("🤖 Bot de Café pronto! Use /membros para começar.")
 
+# --- Ajuda ---
+async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("❓ Menu de Ajuda: Defina os membros com /membros. Então defina a quantidade de vezes em que o café será feito diariamente, com /vezesdia. Então defina o ciclo com o qual os membros rotacionam a vez de fazer o café, com /periodo (pode ser semanal, quinzenal ou mensal). Veja a lista da semana atual com /listasemanal e a mensal com /listamensal.")
 
 def main():
     init_db()
@@ -95,6 +98,7 @@ def main():
     app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("help", help))
     app.add_handler(CommandHandler("membros", membros))
     app.add_handler(CommandHandler("periodo", periodo))
     app.add_handler(CommandHandler("vezesdia", vezesdia))
