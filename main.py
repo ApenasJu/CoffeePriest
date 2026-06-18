@@ -11,7 +11,7 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-DB_PATH = "coffee_bot.db"
+DB_PATH = "path.db"
 
 # --- Database Helpers ---
 def init_db():
